@@ -1,0 +1,17 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+
+$axina-primary: mat-palette($mat-teal, 200);
+$axina-accent:  mat-palette($mat-teal, 50);
+
+$axina-warn:    mat-palette($mat-red);
+
+$axina: mat-light-theme($axina-primary, $axina-accent, $axina-warn);
+
+@include angular-material-theme($axina);
+
+.navtabs-container {
+    background-color: mat-color($axina-accent)
+}
